@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一页了解 · 南宫28</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8fafb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2933;
+            padding: 2.5rem 1.5rem 3.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 开场短句 — 留白呼吸感 */
+        .opener {
+            font-size: 1.6rem;
+            font-weight: 350;
+            letter-spacing: 0.03em;
+            color: #1f2933;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            border-left: 3px solid #90a4ae;
+            padding-left: 1.2rem;
+        }
+
+        .opener strong {
+            font-weight: 550;
+            color: #1f2933;
+        }
+
+        /* 承接段落 */
+        .intro-text {
+            font-size: 1rem;
+            color: #3e4c59;
+            margin-bottom: 2.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .intro-text a {
+            color: #1f2933;
+            text-decoration: underline;
+            text-decoration-color: #b0bec5;
+            text-underline-offset: 3px;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .intro-text a:hover {
+            color: #000;
+            text-decoration-color: #1f2933;
+        }
+
+        /* 标题层级 */
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 550;
+            letter-spacing: 0.02em;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e0e6ea;
+        }
+
+        /* 特点列表 — 温和卡片式 */
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2.8rem;
+        }
+
+        .feature-list li {
+            background: #ffffff;
+            padding: 0.9rem 1.2rem;
+            margin-bottom: 0.65rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eef2f5;
+            font-size: 0.95rem;
+            color: #2d3e50;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            transition: box-shadow 0.15s;
+        }
+
+        .feature-list li:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-list li::before {
+            content: "·";
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #90a4ae;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        /* 场景段落（温和提示） */
+        .scene-block {
+            background: #f2f5f8;
+            padding: 1.4rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e3e9ee;
+        }
+
+        .scene-block p {
+            font-size: 0.95rem;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .scene-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scene-block .label {
+            font-weight: 550;
+            color: #2c3e50;
+        }
+
+        /* FAQ 摘要 — 极简 */
+        .faq-summary {
+            margin-bottom: 2.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .question {
+            font-weight: 520;
+            color: #1f2933;
+            font-size: 0.98rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item .answer {
+            font-size: 0.9rem;
+            color: #4a5b6b;
+            padding-left: 0.3rem;
+            border-left: 2px solid #d5dde3;
+            padding-left: 0.8rem;
+        }
+
+        .faq-item .answer a {
+            color: #1f2933;
+            text-decoration: underline;
+            text-decoration-color: #b0bec5;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        .faq-item .answer a:hover {
+            color: #000;
+            text-decoration-color: #1f2933;
+        }
+
+        /* 温和结尾 */
+        .gentle-footer {
+            border-top: 1px solid #e0e6ea;
+            padding-top: 2rem;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .gentle-footer p {
+            font-size: 0.95rem;
+            color: #3e4c59;
+            max-width: 90%;
+        }
+
+        .gentle-footer p a {
+            color: #1f2933;
+            text-decoration: underline;
+            text-decoration-color: #b0bec5;
+            text-underline-offset: 3px;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .gentle-footer p a:hover {
+            color: #000;
+            text-decoration-color: #1f2933;
+        }
+
+        .footer-meta {
+            font-size: 0.75rem;
+            color: #8f9aa8;
+            margin-top: 1.2rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1.8rem 1.2rem 2.8rem;
+            }
+            .opener {
+                font-size: 1.35rem;
+                padding-left: 1rem;
+            }
+            .feature-list li {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            .scene-block {
+                padding: 1rem 1.2rem;
+            }
+            .gentle-footer p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 开场短句 -->
+    <div class="opener">
+        你打开了网址，<br>正好想快速确认 —— 这里是做什么的。
+    </div>
+
+    <!-- 承接段落：从用户识别用途切入 -->
+    <div class="intro-text">
+        第一次来到 <a href="https://cn-ssl-nangong28.com">南宫28</a> 时，很多人和我一样，第一反应是看看它的定位与氛围。它不是一个需要反复猜测的站点，而是一个信息直接、结构清晰的平台，围绕特定主题提供连贯的浏览方式。无论你是出于好奇，还是带着具体目标，从首页的布局就能感受到一种不急不缓的节奏，这在信息庞杂的今天反而让人安心。
+    </div>
+
+    <!-- 特点列表 -->
+    <h2 class="section-title">页面传递的几个特点</h2>
+    <ul class="feature-list">
+        <li>内容归类明确，导航以功能优先，减少不必要的跳转与干扰。</li>
+        <li>视觉上强调可读性，文字与背景的对比柔和，长时间浏览不易疲劳。</li>
+        <li>交互反馈克制，点击、悬停状态自然，不制造紧迫感。</li>
+        <li>整体没有浮夸的动效或弹窗，页面重心始终放在信息本身。</li>
+    </ul>
+
+    <!-- 场景提示（温和） -->
+    <div class="scene-block">
+        <p><span class="label">适合这样使用：</span> 你可以把它当作一个常规参考站点，慢慢浏览各个区域；也可以只聚焦自己关心的部分，不必一次性看完所有。页面没有强制引导，你决定自己的阅读顺序。</p>
+    </div>
+
+    <!-- FAQ 摘要（选两个常见问题，自然嵌入链接） -->
+    <h2 class="section-title">简短的 FAQ 摘要</h2>
+    <div class="faq-summary">
+        <div class="faq-item">
+            <div class="question">这个网站主要提供什么？</div>
+            <div class="answer">它围绕特定主题组织信息，内容以文字和结构化的模块呈现，你可以通过 <a href="https://cn-ssl-nangong28.com">南宫28</a> 首页直接了解大致方向。</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">需要注册或登录才能浏览吗？</div>
+            <div class="answer">大部分内容对访客开放，不需要预先注册。部分功能或互动区域可能会有独立规则，但首页本身是公开且可以直接阅读的。</div>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-footer">
+        <p>
+            当你准备好了，随时可以回到 <a href="https://cn-ssl-nangong28.com">南宫28</a> 继续浏览。
+            希望这个简短的介绍，让你对它的用途有了一个清晰的初步印象。
+        </p>
+        <div class="footer-meta">—— 静默版 · 仅供了解</div>
+    </div>
+
+</div>
+
+</body>
+</html>
